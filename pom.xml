@@ -18,7 +18,8 @@
 	<modules>
 		<module>customer</module>
         <module>fraud</module>
-    </modules>
+		<module>eureka-server</module>
+	</modules>
 	<scm>
 		<connection/>
 		<developerConnection/>
