@@ -17,7 +17,8 @@
 	</developers>
 	<modules>
 		<module>customer</module>
-	</modules>
+        <module>fraud</module>
+    </modules>
 	<scm>
 		<connection/>
 		<developerConnection/>
