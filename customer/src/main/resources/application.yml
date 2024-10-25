@@ -1,5 +1,7 @@
 server:
-  port: 8080
+  port: 8081
+  servlet:
+    context-path: /customer
 
 management:
   tracing:
@@ -26,3 +28,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    prefer-ip-address: true

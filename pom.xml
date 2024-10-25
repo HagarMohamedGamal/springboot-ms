@@ -19,7 +19,8 @@
 		<module>customer</module>
         <module>fraud</module>
 		<module>eureka-server</module>
-	</modules>
+        <module>apigateway</module>
+    </modules>
 	<scm>
 		<connection/>
 		<developerConnection/>
