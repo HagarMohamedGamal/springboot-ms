@@ -1,0 +1,4 @@
+rabbitmq:
+  queue: customerQueue
+  exchange: customerExchange
+  routingkey: customerRoutingKey

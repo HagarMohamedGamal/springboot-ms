@@ -1,10 +1,11 @@
 package com.customer;
 
+import com.customer.rabbitmq.Sender;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public record CustomerService(CustomerRepository customerRepository, RestTemplate restTemplate) {
+public record CustomerService(CustomerRepository customerRepository, RestTemplate restTemplate, Sender sender) {
     public void registerCustomer(CustomerRegisterationRequest customerRegisterationRequest) {
         Customer customer = Customer.builder()
                 .firstName(customerRegisterationRequest.firstName())
@@ -23,7 +24,7 @@ public record CustomerService(CustomerRepository customerRepository, RestTemplat
         if (fraudCheckResponse != null && fraudCheckResponse.isFraudster()) {
             throw new IllegalStateException("fraudster");
         }
-        // todo: send notification
+        sender.send("customer added successfully");
 
     }
 }
