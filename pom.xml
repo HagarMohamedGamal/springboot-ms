@@ -20,7 +20,8 @@
         <module>fraud</module>
 		<module>eureka-server</module>
         <module>apigateway</module>
-    </modules>
+		<module>notification</module>
+	</modules>
 	<scm>
 		<connection/>
 		<developerConnection/>
