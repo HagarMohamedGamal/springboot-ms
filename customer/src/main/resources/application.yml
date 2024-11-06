@@ -7,6 +7,10 @@ management:
   tracing:
     sampling:
       probability: 1
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 spring:
   application:
